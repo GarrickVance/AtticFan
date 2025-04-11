@@ -133,13 +133,24 @@ sensor:
 ## Installation
 1. Install ESPHome
 2. Copy the configuration file
-3. Create a `secrets.yaml` file with your WiFi credentials:
+3. Create a `secrets.yaml` file with your sensitive credentials:
    ```yaml
+   # WiFi credentials
    wifi_ssid: "your_wifi_ssid"
    wifi_password: "your_wifi_password"
+   
+   # Web interface credentials
    web_username: "your_web_username"
    web_password: "your_web_password"
+   
+   # API and OTA credentials
+   api_encryption_key: "your_api_encryption_key"
+   ota_password: "your_ota_password"
+   
+   # Access Point credentials
+   ap_password: "your_ap_password"
    ```
+   > **IMPORTANT**: Never commit your `secrets.yaml` file to version control. Keep it secure and local to your installation.
 4. Flash to ESP32:
    - For ESP32-S2-SAOLA-1: Use the Adafruit WebSerial ESPTool (https://adafruit.github.io/Adafruit_WebSerial_ESPTool/) as the web-based flashing method may not work
    - Steps for manual flashing:
