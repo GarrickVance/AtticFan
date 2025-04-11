@@ -1,5 +1,9 @@
 # Attic Fan Controller
 
+[![ESPHome](https://img.shields.io/badge/ESPHome-2025.3.3-blue.svg)](https://esphome.io/)
+[![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
+[![ESP32-S2](https://img.shields.io/badge/ESP32--S2-SAOLA--1-green.svg)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/hw-reference/esp32s2/user-guide-saola-1-v1.2.html)
+
 An ESP32-based smart attic fan controller that automatically manages fan operation based on temperature thresholds.
 
 > This project is a fork of [Original Repository Name](https://github.com/original/repo) with modifications for attic fan control.
