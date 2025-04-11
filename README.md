@@ -6,7 +6,7 @@
 
 An ESP32-based smart attic fan controller that automatically manages fan operation based on temperature thresholds.
 
-> This project is a fork of [Original Repository Name](https://github.com/original/repo) with modifications for attic fan control.
+> This project is a fork of [AtticFan](https://github.com/garrick/AtticFan) with modifications for attic fan control.
 
 ## Features
 - Temperature-based automatic fan control
@@ -140,7 +140,14 @@ sensor:
    web_username: "your_web_username"
    web_password: "your_web_password"
    ```
-4. Flash to ESP32
+4. Flash to ESP32:
+   - For ESP32-S2-SAOLA-1: Use the Adafruit WebSerial ESPTool (https://adafruit.github.io/Adafruit_WebSerial_ESPTool/) as the web-based flashing method may not work
+   - Steps for manual flashing:
+     1. Connect the ESP32 to your computer via USB
+     2. Open the Adafruit WebSerial ESPTool in your browser
+     3. Select the correct port
+     4. Upload the generated .bin file
+     5. Wait for the flashing process to complete
 5. Access web interface at attic-fan.local
 
 ## Web Interface Features
