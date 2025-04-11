@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attic Fan Control - Test</title>
+    <link rel="stylesheet" href="https://esphome.io/_static/webserver-v1.min.css">
+    <style>
+        .card {
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f5f5f5;
+        }
+        .sensor-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2196F3;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 4px;
+            margin: 5px 0;
+        }
+        .status-on {
+            background: #4CAF50;
+            color: white;
+        }
+        .status-off {
+            background: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Attic Fan Control</h2>
+        <div class="sensor-value">
+            Temperature: <span id="temperature-value">25.5°C</span>
+        </div>
+        <div class="sensor-value">
+            Humidity: <span id="humidity-value">45%</span>
+        </div>
+        <div class="sensor-value">
+            Pressure: <span id="pressure-value">1013 hPa</span>
+        </div>
+        <div class="status status-off" id="fan-status">
+            Fan Status: OFF
+        </div>
+        <button class="button" onclick="toggleFan()">Toggle Fan</button>
+    </div>
+
+    <script>
+        function toggleFan() {
+            const status = document.getElementById('fan-status');
+            if (status.textContent.includes('OFF')) {
+                status.textContent = 'Fan Status: ON';
+                status.className = 'status status-on';
+            } else {
+                status.textContent = 'Fan Status: OFF';
+                status.className = 'status status-off';
+            }
+        }
+
+        // Simulate real-time updates
+        function updateValues() {
+            const temp = (Math.random() * 10 + 20).toFixed(1);
+            const hum = (Math.random() * 20 + 40).toFixed(0);
+            const press = (Math.random() * 10 + 1010).toFixed(0);
+            
+            document.getElementById('temperature-value').textContent = temp + '°C';
+            document.getElementById('humidity-value').textContent = hum + '%';
+            document.getElementById('pressure-value').textContent = press + ' hPa';
+        }
+        setInterval(updateValues, 1000);
+    </script>
+</body>
+</html> 

@@ -1,4 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ESPHome
+.secrets.yaml
+secrets.yaml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local development
+.env
+*.local
 *~
 *.pyc
 *.mpy
